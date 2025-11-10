@@ -1,0 +1,233 @@
+/* === GLOBAL === */
+body {
+    background-color: #1e1f23;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-family: "Poppins", sans-serif;
+    margin: 0;
+    padding: 0;
+    min-height: 100vh;
+  }
+  
+  .div {
+    width: 480px;
+    min-height: 110vh;
+    background: linear-gradient(180deg, #2c2f35 0%, #1c1d21 100%);
+    border-radius: 40px;
+    border: 2px solid #f9d838;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: center;
+    box-shadow: 0 0 40px rgba(249, 216, 56, 0.15);
+    overflow: hidden;
+    padding: 20px 0;
+  }
+  
+  .container {
+    width: 92%;
+    margin: 0 auto;
+  }
+  
+  /* === HEADER === */
+  header {
+    width: 100%;
+    display: flex;
+    justify-content: center;
+  }
+  
+  nav {
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    gap: 10px;
+    padding: 15px 0;
+    background: #26282e;
+    border-radius: 20px;
+    box-shadow: inset 0 0 10px rgba(249, 216, 56, 0.1);
+  }
+  
+  nav div {
+    flex: 1;
+    text-align: center;
+    border-radius: 12px;
+    background-color: #2f3238;
+    padding: 10px;
+    transition: all 0.3s ease;
+    cursor: pointer; /* 🟡 cursor qo'shildi */
+  }
+  
+  nav div:hover {
+    transform: scale(1.08);
+    background-color: #3a3d45;
+    box-shadow: 0 0 20px rgba(249, 216, 56, 0.25);
+  }
+  
+  /* 🟠 Turli rangli nav title'lar */
+  .nav__start h4 {
+    color: #ff5858; /* qizil */
+  }
+  .nav__middle h4 {
+    color: #6f72e2; /* ko‘k */
+  }
+  .nav__end h4 {
+    color: #84cb69; /* yashil */
+  }
+  
+  nav h4 {
+    font-size: 13px;
+    margin: 0;
+    font-weight: 600;
+  }
+  
+  nav p {
+    margin: 4px 0 0 0;
+    color: #fff;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 5px;
+    font-weight: 500;
+  }
+  
+  nav img {
+    width: 15px;
+    height: 15px;
+  }
+  
+  /* === MAIN === */
+  main {
+    flex: 1;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+  }
+  
+  section {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    row-gap: 30px;
+  }
+  
+  .stn__top {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+  }
+  
+  .stn__top img {
+    width: 55px;
+    height: 55px;
+    animation: coinFloat 2s infinite ease-in-out;
+  }
+  
+  @keyframes coinFloat {
+    0%, 100% {
+      transform: translateY(0);
+    }
+    50% {
+      transform: translateY(-6px);
+    }
+  }
+  
+  .stn__top h1 {
+    font-size: 42px;
+    font-weight: 700;
+    color: #fff;
+    letter-spacing: -1px;
+  }
+  
+  /* === TAP BUTTON === */
+  .btn {
+    width: 280px;
+    height: 280px;
+    border-radius: 50%;
+    border: 3px solid #f9d838;
+    background: radial-gradient(circle at top, #5155da 0%, #2b2d74 80%);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    box-shadow: 0 0 35px rgba(81, 85, 218, 0.5);
+    transition: all 0.2s ease;
+    cursor: pointer;
+  }
+  
+  .btn:hover {
+    transform: scale(1.08);
+    box-shadow: 0 0 55px rgba(81, 85, 218, 0.7);
+  }
+  
+  .btn img {
+    width: 60%;
+    height: auto;
+    transform: translateY(5px);
+  }
+  
+  /* === BOOST === */
+  .boost {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 10px;
+  }
+  
+  .boost img {
+    width: 25px;
+    height: 35px;
+  }
+  
+  .boost p {
+    color: #fff;
+    font-size: 18px;
+    font-weight: 600;
+  }
+  
+  /* === FOOTER === */
+  footer {
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    margin-bottom: 10px;
+  }
+  
+  .footer {
+    width: 430px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background-color: rgba(50, 54, 60, 0.7);
+    border-radius: 18px;
+    padding: 10px 15px;
+    box-shadow: inset 0 0 15px rgba(255, 255, 255, 0.05);
+  }
+  
+  .footer div {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 5px;
+    transition: 0.3s;
+    padding: 5px;
+    border-radius: 10px;
+    cursor: pointer; /* 🟡 cursor qo'shildi */
+  }
+  
+  .footer div:hover {
+    background-color: rgba(33, 36, 41, 0.6);
+    transform: scale(1.1);
+  }
+  
+  .footer img {
+    width: 26px;
+    height: 26px;
+  }
+  
+  .footer p {
+    color: white;
+    font-size: 13px;
+    font-weight: 600;
+    margin: 0;
+  }
