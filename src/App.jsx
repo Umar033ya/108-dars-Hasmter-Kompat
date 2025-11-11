@@ -7,7 +7,10 @@ import binance from '../public/binance.png'
 import mine from '../public/mine.png'
 import friend from '../public/friend.png'
 import earn from '../public/earn.png'
+import exclude from '../public/Exclude.png'
+import mema from '../public/mema.png'
 import airdrop from '../public/airdrop.png'
+import x10 from '../public/x10 (1).png'
 import { useState , useEffect} from 'react'
 
 function App() {
@@ -96,6 +99,75 @@ function App() {
   
     return () => clearInterval(interval);
   }, [perMinut]);
+  const Mine = () => {
+    document.querySelector("main").style.display = "none"
+    document.querySelector(".mine").style.display ="block"
+    document.querySelector(".firstMine").style.display ="block"
+    document.querySelector(".SecondMine").style.display ="block"
+    document.querySelector(".thirdMine").style.display ="block"
+
+  }
+  const Friends = () => {
+    document.querySelector("main").style.display = "none"
+    document.querySelector(".mine").style.display ="none"
+    document.querySelector(".firstMine").style.display ="none"
+    document.querySelector(".SecondMine").style.display ="none"
+    document.querySelector(".thirdMine").style.display ="none"
+
+  }
+  const Earn = () => {
+    document.querySelector("main").style.display = "none"
+    document.querySelector(".mine").style.display ="none"
+    document.querySelector(".firstMine").style.display ="none"
+    document.querySelector(".SecondMine").style.display ="none"
+    document.querySelector(".thirdMine").style.display ="none"
+
+
+  }
+  const Airdrop = () => {
+    document.querySelector("main").style.display = "none"
+    document.querySelector(".mine").style.display ="none"
+    document.querySelector(".firstMine").style.display ="none"
+    document.querySelector(".SecondMine").style.display ="none"
+    document.querySelector(".thirdMine").style.display ="none"
+
+
+  }
+  const Exchange = () => {
+    document.querySelector("main").style.display = "block"
+    document.querySelector(".mine").style.display ="none"
+    document.querySelector(".firstMine").style.display ="none"
+    document.querySelector(".SecondMine").style.display ="none"
+    document.querySelector(".thirdMine").style.display ="none"
+  }
+  const firstMine = () =>{
+    if(count >= 192){
+      setPerMinut(prev => prev + 120)
+      setCount(prev => prev - 192)
+      alert("You bought 1 mine")
+    }else{
+      alert("You have not enough coins")
+    }
+  }
+  const secondMine = () =>{
+    if(count >= 1500){
+      setPerMinut(prev => prev + 997)
+      setCount(prev => prev - 1500)
+      alert("You bought 1 mine")
+
+    }else{
+      alert("You have not enough coins")
+    }
+  }
+  const thirdMine = () =>{
+    if(count >= 200){
+      setPerMinut(prev => prev + 120)
+      setCount(prev => prev - 200)
+      alert("You bought 1 mine")
+    }else{
+      alert("You have not enough coins")
+    }
+  }
   return (
     <>
       <div className="div">
@@ -140,26 +212,76 @@ function App() {
           </section>
         </div>
       </main>
+      <div className='mine'>
+       <div onClick={firstMine} className='firstMine'>
+           <div className='upper'>
+            <img src={mema} alt="" />
+            <div>
+              <h4> Тоp 10 cmc pairs</h4>
+              <p>Profit per minute</p>
+              <div>
+                <img src={coin} alt="" />
+                <p>120</p>
+              </div>
+            </div>
+           </div>
+           <div className='footers'>
+            <h4>Price : <img src={coin} alt="" />192</h4>
+           </div>
+       </div>
+       <div onClick={secondMine} className='SecondMine'>
+           <div className='upper'>
+            <img src={x10} alt="" />
+            <div>
+              <h4>Margin trading x10</h4>
+              <p>Profit per minute</p>
+              <div>
+                <img src={coin} alt="" />
+                <p>997</p>
+              </div>
+            </div>
+           </div>
+           <div className='footers'>
+            <h4>Price : <img src={coin} alt="" />1500</h4>
+           </div>
+       </div>
+       <div onClick={thirdMine}  className='thirdMine'>
+           <div className='upper'>
+            <img src={exclude} alt="" />
+            <div>
+              <h4>Тоp 10 cmc pairs</h4>
+              <p>Profit per minute</p>
+              <div>
+                <img src={coin} alt="" />
+                <p>120</p>
+              </div>
+            </div>
+           </div>
+           <div className='footers'>
+            <h4>Price : <img src={coin} alt="" />200</h4>
+           </div>
+       </div>
+      </div>
       <footer>
         <div className="container">
           <div className="footer">
-            <div className="exchange">
+            <div onClick={Exchange} className="exchange">
               <img src={binance} alt="" />
               <p>Exchange</p>
             </div>
-            <div className="mine">
+            <div onClick={Mine} className="mine">
               <img src={mine} alt="" />
               <p>Mine</p>
             </div>
-            <div className="friends">
+            <div onClick={Friends} className="friends">
               <img src={friend} alt="" />
               <p>Friends</p>
             </div>
-            <div className="earn">
+            <div onClick={Earn} className="earn">
               <img src={earn} alt="" />
               <p>Earn</p>
             </div>
-            <div className="airdrop">
+            <div onClick={Airdrop} className="airdrop">
               <img src={airdrop} alt="" />
               <p>Airdrop</p>
             </div>
