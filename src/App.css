@@ -1,4 +1,3 @@
-/* === GLOBAL === */
 body {
     background-color: #1e1f23;
     display: flex;
@@ -8,8 +7,7 @@ body {
     margin: 0;
     padding: 0;
     min-height: 100vh;
-  }
-  
+  } 
   .div {
     width: 480px;
     min-height: 110vh;
@@ -23,20 +21,17 @@ body {
     box-shadow: 0 0 40px rgba(249, 216, 56, 0.15);
     overflow: hidden;
     padding: 20px 0;
+    position: relative;
   }
-  
   .container {
     width: 92%;
     margin: 0 auto;
   }
-  
-  /* === HEADER === */
   header {
     width: 100%;
     display: flex;
     justify-content: center;
   }
-  
   nav {
     display: flex;
     justify-content: space-around;
@@ -47,7 +42,6 @@ body {
     border-radius: 20px;
     box-shadow: inset 0 0 10px rgba(249, 216, 56, 0.1);
   }
-  
   nav div {
     flex: 1;
     text-align: center;
@@ -55,32 +49,27 @@ body {
     background-color: #2f3238;
     padding: 10px;
     transition: all 0.3s ease;
-    cursor: pointer; /* 🟡 cursor qo'shildi */
+    cursor: pointer; 
   }
-  
   nav div:hover {
     transform: scale(1.08);
     background-color: #3a3d45;
     box-shadow: 0 0 20px rgba(249, 216, 56, 0.25);
   }
-  
-  /* 🟠 Turli rangli nav title'lar */
   .nav__start h4 {
-    color: #ff5858; /* qizil */
+    color: #ff5858; 
   }
   .nav__middle h4 {
-    color: #6f72e2; /* ko‘k */
+    color: #6f72e2; 
   }
   .nav__end h4 {
-    color: #84cb69; /* yashil */
+    color: #84cb69;
   }
-  
   nav h4 {
     font-size: 13px;
     margin: 0;
     font-weight: 600;
   }
-  
   nav p {
     margin: 4px 0 0 0;
     color: #fff;
@@ -90,13 +79,10 @@ body {
     gap: 5px;
     font-weight: 500;
   }
-  
   nav img {
     width: 15px;
     height: 15px;
   }
-  
-  /* === MAIN === */
   main {
     flex: 1;
     display: flex;
@@ -104,26 +90,22 @@ body {
     justify-content: center;
     flex-direction: column;
   }
-  
   section {
     display: flex;
     flex-direction: column;
     align-items: center;
     row-gap: 30px;
   }
-  
   .stn__top {
     display: flex;
     align-items: center;
     gap: 10px;
   }
-  
   .stn__top img {
     width: 55px;
     height: 55px;
     animation: coinFloat 2s infinite ease-in-out;
   }
-  
   @keyframes coinFloat {
     0%, 100% {
       transform: translateY(0);
@@ -132,15 +114,12 @@ body {
       transform: translateY(-6px);
     }
   }
-  
   .stn__top h1 {
     font-size: 42px;
     font-weight: 700;
     color: #fff;
     letter-spacing: -1px;
   }
-  
-  /* === TAP BUTTON === */
   .btn {
     width: 280px;
     height: 280px;
@@ -154,45 +133,36 @@ body {
     transition: all 0.2s ease;
     cursor: pointer;
   }
-  
   .btn:hover {
     transform: scale(1.08);
     box-shadow: 0 0 55px rgba(81, 85, 218, 0.7);
   }
-  
   .btn img {
     width: 60%;
     height: auto;
     transform: translateY(5px);
   }
-  
-  /* === BOOST === */
   .boost {
     display: flex;
     align-items: center;
     justify-content: center;
     gap: 10px;
   }
-  
   .boost img {
     width: 25px;
     height: 35px;
   }
-  
   .boost p {
     color: #fff;
     font-size: 18px;
     font-weight: 600;
   }
-  
-  /* === FOOTER === */
   footer {
     width: 100%;
     display: flex;
     justify-content: center;
     margin-bottom: 10px;
   }
-  
   .footer {
     width: 430px;
     display: flex;
@@ -203,7 +173,6 @@ body {
     padding: 10px 15px;
     box-shadow: inset 0 0 15px rgba(255, 255, 255, 0.05);
   }
-  
   .footer div {
     display: flex;
     flex-direction: column;
@@ -214,17 +183,14 @@ body {
     border-radius: 10px;
     cursor: pointer; /* 🟡 cursor qo'shildi */
   }
-  
   .footer div:hover {
     background-color: rgba(33, 36, 41, 0.6);
     transform: scale(1.1);
   }
-  
   .footer img {
     width: 26px;
     height: 26px;
   }
-  
   .footer p {
     color: white;
     font-size: 13px;
@@ -244,7 +210,6 @@ body {
   display: none;
   margin-bottom: 20px;
 }
-
 .firstMine:hover {
   transform: scale(1.03);
   box-shadow: 0 6px 20px rgba(255, 204, 0, 0.25);
@@ -257,7 +222,6 @@ body {
   transform: scale(1.03);
   box-shadow: 0 6px 20px rgba(255, 204, 0, 0.25);
 }
-
 .upper {
   display: flex;
   align-items: center;
@@ -265,36 +229,30 @@ body {
   border-bottom: 1px solid rgba(255,255,255,0.1);
   padding-bottom: 10px;
 }
-
 .upper img {
   width: 60px;
   height: 60px;
   border-radius: 10px;
   object-fit: cover;
 }
-
 .upper h4 {
   margin: 0;
   font-size: 18px;
 }
-
 .upper p {
   margin: 4px 0;
   color: #aaa;
   font-size: 14px;
 }
-
 .upper div div {
   display: flex;
   align-items: center;
   gap: 6px;
 }
-
 .upper div div img {
   width: 18px;
   height: 18px;
 }
-
 .footers {
   display: flex;
   align-items: center;
@@ -303,13 +261,11 @@ body {
   padding-top: 10px;
   font-size: 18px;
 }
-
 .footers img {
   width: 20px;
   height: 20px;
   margin-left: 6px;
 }
-
 .footers h4 {
   margin: 0;
   display: flex;
@@ -322,4 +278,71 @@ body {
   display: flex;
   flex-direction: column;
   align-items: center;
+}
+.modalTap {
+  position: absolute;
+  top: 210px;
+  left: 180px;
+  transform: translate(-50%, -50%);
+  background: #2b2b2b;
+  border-radius: 18px;
+  padding: 24px;
+  width: 280px;
+  border: 2px solid #f7c843; 
+  box-shadow: 0 0 30px rgba(255, 215, 0, 0.2);
+  color: #fff;
+  font-family: 'Poppins', sans-serif;
+  text-align: left;
+  transition: all 0.3s ease;
+}
+.modalTap button {
+  background: transparent;
+  border: none;
+  color: #fff;
+  font-size: 24px;
+  position: absolute;
+  top: 10px;
+  right: 15px;
+  cursor: pointer;
+  transition: 0.25s ease;
+}
+.modalTap button:hover {
+  color: #f7c843;
+  transform: scale(1.2);
+}
+.modalTap .lvl,
+.modalTap .lvl2,
+.modalTap .lvl3 {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  background: #3b3b3b;
+  border-radius: 14px;
+  padding: 10px 16px;
+  margin-top: 15px;
+  font-size: 15px;
+  transition: all 0.25s ease;
+  box-shadow: 0 0 8px rgba(0,0,0,0.3);
+}
+.modalTap .lvl:hover,
+.modalTap .lvl2:hover,
+.modalTap .lvl3:hover {
+  background: #4b4b4b;
+  transform: scale(1.03);
+  border: 1px solid #f7c843;
+  box-shadow: 0 0 15px rgba(247, 200, 67, 0.5);
+  cursor: pointer;
+}
+.modalTap img {
+  width: 18px;
+  height: 18px;
+  vertical-align: middle;
+  margin: 0 4px;
+}
+.modalTap p {
+  margin: 0;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  width: 100%;
 }

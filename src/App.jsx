@@ -20,6 +20,7 @@ function App() {
   const [level, setLevel] = useState(1)
   const [perMinut, setPerMinut] = useState(15)
   const [booost, setBooost] = useState(100)
+  const [modalTap, setModalTap] = useState(false)
   const btnClick = () =>{
     if(limit > 0 && limit >= tap){
       setCount(prev => prev + tap)
@@ -41,53 +42,53 @@ function App() {
   }, [booost]);
   useEffect(() => {
     if(count === 100){
-      setLevel(2)
-      setTap(2)
+      setLevel(prev => prev +1)
+      setTap(prev => prev +1)
       setBooost(prev => prev + 100)
       setPerMinut(prev => prev + 15)
     }else if(count === 200){
-      setLevel(3)
-      setTap(3)
+      setLevel(prev => prev + 1)
+      setTap(prev => prev + 1)
       setBooost(prev => prev + 100)
       setPerMinut(prev => prev + 15)
     }else if(count === 300){
-      setLevel(3)
-      setTap(3)
+      setLevel(prev => prev +1)
+      setTap(prev => prev +1)
       setBooost(prev => prev + 100)
       setPerMinut(prev => prev + 15)
     }else if(count === 400){
-      setLevel(4)
-      setTap(4)
+      setLevel(prev => prev +1)
+      setTap(prev => prev +1)
       setBooost(prev => prev + 100)
       setPerMinut(prev => prev + 15)
     }else if(count === 500){
-      setLevel(5)
-      setTap(5)
+      setLevel(prev => prev +1)
+      setTap(prev => prev +1)
       setBooost(prev => prev + 100)
       setPerMinut(prev => prev + 15)
     }else if(count === 600){
-      setLevel(6)
-      setTap(6)
+      setLevel(prev => prev +1)
+      setTap(prev => prev +1)
       setBooost(prev => prev + 100)
       setPerMinut(prev => prev + 15)
     }else if(count === 700){
-      setLevel(7)
-      setTap(7)
+      setLevel(prev => prev +1)
+      setTap(prev => prev +1)
       setBooost(prev => prev + 100)
       setPerMinut(prev => prev + 15)
     }else if(count === 800){
-      setLevel(8)
-      setTap(8)
+      setLevel(prev => prev +1)
+      setTap(prev => prev +1)
       setBooost(prev => prev + 100)
       setPerMinut(prev => prev + 15)
     }else if(count === 900){
-      setLevel(9)
-      setTap(9)
+      setLevel(prev => prev +1)
+      setTap(prev => prev +1)
       setBooost(prev => prev + 100)
       setPerMinut(prev => prev + 15)
     }else if(count === 1000){
-      setLevel(10)
-      setTap(10)
+      setLevel(prev => prev +1)
+      setTap(prev => prev +1)
       setBooost(prev => prev + 100)
       setPerMinut(prev => prev + 15)
     }
@@ -168,13 +169,40 @@ function App() {
       alert("You have not enough coins")
     }
   }
+  const modalTapOpen = () =>{
+    setModalTap(true)
+  }
+  const modalTapClose = () => {
+    setModalTap(false)
+  }
+  const tapLvl1 = () => {
+   if(count >= 1000){
+    setTap(prev => prev + 2)
+   }else{
+    alert("You have not enough coins")
+   }
+  }
+  const tapLvl2 = () => {
+    if(count >= 1500){
+     setTap(prev => prev + 3)
+    }else{
+     alert("You have not enough coins")
+    }
+   }
+   const tapLvl3 = () => {
+    if(count >= 2000){
+     setTap(prev => prev + 4)
+    }else{
+     alert("You have not enough coins")
+    }
+   }
   return (
     <>
       <div className="div">
       <header>
         <div className="container">
           <nav>
-            <div className='nav__start'>
+            <div  onClick={modalTapOpen} className='nav__start'>
               <h4>Earn per tap</h4>
               <p>
                 <img src={coin} alt="" />
@@ -262,6 +290,7 @@ function App() {
            </div>
        </div>
       </div>
+      
       <footer>
         <div className="container">
           <div className="footer">
@@ -288,6 +317,27 @@ function App() {
           </div>
         </div>
       </footer>
+       {modalTap &&(
+        <div className='modalTap'>
+        <button onClick={modalTapClose}>❌</button>
+        <div onClick={tapLvl1} className='lvl'>
+          <p>
+            lvl 1 : +2 <img src={coin} alt="" />   - 1000 <img src={coin} alt="" />
+          </p>
+        </div>
+        <div onClick={tapLvl2} className='lvl2'>
+          <p>
+            lvl 1 : +3 <img src={coin} alt="" />   - 1500 <img src={coin} alt="" />
+          </p>
+        </div>
+        <div onAuxClick={tapLvl3} className='lvl3'>
+          <p>
+            lvl 1 : +4 <img src={coin} alt="" />   - 2000 <img src={coin} alt="" />
+          </p>
+        </div>
+      </div>
+       )}
+      
       </div>
     </>
   )
