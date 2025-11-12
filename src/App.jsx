@@ -106,6 +106,7 @@ function App() {
     document.querySelector(".firstMine").style.display ="block"
     document.querySelector(".SecondMine").style.display ="block"
     document.querySelector(".thirdMine").style.display ="block"
+    document.querySelector(".earnPage").style.display ="none"
 
   }
   const Friends = () => {
@@ -114,7 +115,8 @@ function App() {
     document.querySelector(".firstMine").style.display ="none"
     document.querySelector(".SecondMine").style.display ="none"
     document.querySelector(".thirdMine").style.display ="none"
-
+    document.querySelector(".earnPage").style.display ="none"
+   
   }
   const Earn = () => {
     document.querySelector("main").style.display = "none"
@@ -122,6 +124,7 @@ function App() {
     document.querySelector(".firstMine").style.display ="none"
     document.querySelector(".SecondMine").style.display ="none"
     document.querySelector(".thirdMine").style.display ="none"
+    document.querySelector(".earnPage").style.display ="flex"
 
 
   }
@@ -131,6 +134,7 @@ function App() {
     document.querySelector(".firstMine").style.display ="none"
     document.querySelector(".SecondMine").style.display ="none"
     document.querySelector(".thirdMine").style.display ="none"
+    document.querySelector(".earnPage").style.display ="none"
 
 
   }
@@ -140,6 +144,8 @@ function App() {
     document.querySelector(".firstMine").style.display ="none"
     document.querySelector(".SecondMine").style.display ="none"
     document.querySelector(".thirdMine").style.display ="none"
+    document.querySelector(".earnPage").style.display ="none"
+
   }
   const firstMine = () =>{
     if(count >= 192){
@@ -195,6 +201,22 @@ function App() {
     }else{
      alert("You have not enough coins")
     }
+   }
+   const tggroup = () => {
+    window.location.href = "https://t.me/hamster_kombat_bot"
+    setCount(prev => prev + 500)
+   }
+   const tg2group = () => {
+    window.location.href = "https://t.me/hamster_kombat?utm_source=chatgpt.com"
+    setCount(prev => prev + 500)
+   }
+   const INgroup = () => {
+    window.location.href = "https://www.instagram.com/yakubov.x_?igsh=MXJicXJpNzB6NWtvZA=="
+    setCount(prev => prev + 500)
+   }
+   const IN2group = () => {
+    window.location.href = "https://www.instagram.com/developerfrontent?igsh=MW1oNGh1Z29rdG0waQ=="
+    setCount(prev => prev + 500)
    }
   return (
     <>
@@ -290,7 +312,28 @@ function App() {
            </div>
        </div>
       </div>
-      
+      <div className='earnPage'>
+        <div>
+          <img src="https://avatars.mds.yandex.net/i?id=543993dc6c8ffc5fd60a3a48c79e53ae4e86178c-3911063-images-thumbs&n=13" alt="" />
+          <p>Follow Hasmter Kompat group</p>
+          <button onClick={tggroup}>Do</button>
+        </div>
+        <div>
+          <img src="https://avatars.mds.yandex.net/i?id=363b65348eee7b3d4da23e8714cd01a14bafa3d1-5558158-images-thumbs&n=13" alt="" />
+          <p>Follow Hasmter Kompat group</p>
+          <button onClick={INgroup}>Do</button>
+        </div>
+        <div>
+          <img src="https://avatars.mds.yandex.net/i?id=543993dc6c8ffc5fd60a3a48c79e53ae4e86178c-3911063-images-thumbs&n=13" alt="" />
+          <p>Follow Hasmter Kompat group</p>
+          <button onClick={tg2group}>Do</button>
+        </div>
+        <div>
+          <img src="https://avatars.mds.yandex.net/i?id=363b65348eee7b3d4da23e8714cd01a14bafa3d1-5558158-images-thumbs&n=13" alt="" />
+          <p>Follow Hasmter Kompat group</p>
+          <button onClick={IN2group}>Do</button>
+        </div>
+      </div>
       <footer>
         <div className="container">
           <div className="footer">
